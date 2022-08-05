@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Home|Protan Halder</title>
+</head>
+
+<body>
+    <form method="post">
+        <nav class="navbar navbar-dark px-3 bg-dark">
+            <button type="button" class="btn btn-outline-primary"><a class="" style="text-decoration: none;"
+                    href="{{url_for('QR_CODE')}}">QR Code</a></button>
+            <button type="button" class="btn btn-outline-primary"><a class="" style="text-decoration: none;"
+                    href="{{url_for('AUDIO_MKR')}}">Audio Book</a></button>
+            <button type="button" class="btn btn-outline-primary"><a class="" style="text-decoration: none;"
+                    href="{{url_for('Online_profile')}}">Online Profile</a></button>
+            <button type="button" class="btn btn-outline-info"><a class="" style="text-decoration: none;"
+                    href="{{url_for('Developer')}}">Developer</a></button>
+            <!-- Navbar content -->
+        </nav>
+        <div class="container p-4">
+
+
+            <div class="form-floating mb-3 p-2 m-2 rounded-2" style="background-color: #e3f2fd;">
+                <div class="form-check form-switch">
+                    <input class=" form-check-input" name="type" value="facebook" type="checkbox" role="switch"
+                        id="flexSwitchCheckChecked" checked>
+                    <p class="text-start fw-bolder ">Facebook to QR Code</p>
+                    
+                </div>
+                <div class="form-check form-switch">
+                    <input class=" form-check-input" name="type" value="messenger" type="checkbox" role="switch"
+                        id="flexSwitchCheckChecked">
+                    <p class="text-start fw-bolder ">Messenger to QR Code</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class=" form-check-input" name="type" value="whatsapp" type="checkbox" role="switch"
+                        id="flexSwitchCheckChecked">
+                    <p class="text-start fw-bolder ">WhatsApp to QR Code</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class=" form-check-input" name="type" value="phone" type="checkbox" role="switch"
+                        id="flexSwitchCheckChecked">
+                    <p class="text-start fw-bolder ">Phone Number to QR Code</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class=" form-check-input" name="type" value="messege" type="checkbox" role="switch"
+                        id="flexSwitchCheckChecked">
+                    <p class="text-start fw-bolder ">Messeges to QR Code</p>
+                </div>
+                
+
+
+                <div class="form-floating">
+                    <textarea name="data" class="form-control" placeholder="Leave a comment here"
+                        id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Enter Here..</label>
+                </div>
+
+
+                <div class="navbar container">
+                    <button type="submit" class="col-8 mx-auto btn btn-success">Make</button>
+                    <button  class="col-8 mx-auto my-1 btn  btn-danger"><a class="link-light" style="text-decoration: none;" href="{{url_for('download_FB_qr_file')}}">Download Facebook</a></button>
+                    <button  class="col-8 mx-auto my-1 btn  btn-danger"><a class="link-light" style="text-decoration: none;" href="{{url_for('download_Messenger_qr_file')}}">Download Messenger</a></button>
+                    <button  class="col-8 mx-auto my-1 btn  btn-danger"><a class="link-light" style="text-decoration: none;" href="{{url_for('download_WhatsApp_qr_file')}}">Download WhatsApp</a></button>
+                    <button  class="col-8 mx-auto my-1 btn  btn-danger"><a class="link-light" style="text-decoration: none;" href="{{url_for('download_Phone_qr_file')}}">Download Phone</a></button>
+                    <button  class="col-8 mx-auto my-1 btn  btn-danger"><a class="link-light" style="text-decoration: none;" href="{{url_for('download_Message_qr_file')}}">Download Message</a></button>
+                </div>
+            </div>
+
+
+
+            <div class="container mt-5">
+                <li class="fs-6 fw-bolder">Enter Facebook URL for make facebook QR Code </li>
+                <li class="fs-6 fw-bolder">Enter Facebook URL for make Messenger QR Code</li>
+                <li class="fs-6 fw-bolder">Enter WhatsApp number to make WhatsApp QR Code</li>
+                <li class="fs-6 fw-bolder">Enter Your Phone number To make Phone QR Code</li>
+                <li class="fs-6 fw-bolder">Enter Your Phone number To make Message QR Code</li>
+            </div>
+
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <!-- Navbar content -->
+            <p class="link-light fs-6 m-auto">Copyright &copy; PROTAN HALDER 2022</p>
+        </nav>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    </form>
+</body>
+
+</html>
